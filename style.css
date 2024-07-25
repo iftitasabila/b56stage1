@@ -4,6 +4,7 @@ body {
 
 .box {
   border: 1px black solid;
+  border-radius: 8px;
   width: 350px;
   margin: auto;
   margin-top: 40px;
@@ -16,7 +17,7 @@ body {
 }
 
 #description {
-  color: red;
+  color: black;
 }
 
 p {
@@ -25,4 +26,54 @@ p {
 
 p.country {
   font-weight: 900;
+}
+
+
+
+/* Navbar */
+nav{
+  background-color: rgb(241, 232, 215);
+  display: flex;
+  justify-content: space-between;
+}
+
+.left{
+  display: flex;
+  align-items: center;
+}
+
+.left ul{
+  display: flex;
+}
+
+.left ul li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.left ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 900;
+  position: relative;
+  left: 30px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.right button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: black;
+}
+
+.right a {
+  text-decoration: none;
+  color: wheat;
+  font-weight: 700;
 }
