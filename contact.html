@@ -4,36 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Web</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="contact.css" />
 </head>
 <body>
-    <nav>
-        <div class="left">
-            <ul>
-                <img class="logo"
-            src="dumbways.png"
-            alt="logo-image" style="width: 50px; "/>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="project.html">My Project</a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="right">
-            <Button>
-                <a href="contact.html">Contact Me</a>
-            </Button>           
-        </div>
-    </nav>
-
-    <div class="container">
-        <div class="left"></div>
-        <div class="right"></div>
+     <!--Navbar-->
+  <nav>
+    <div class="left">
+        <ul>
+            <img class="logo"
+        src="./assets/dumbways.png"
+        alt="logo-image" style="width: 50px; "/>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="project.html">My Project</a>
+            </li>
+            <li>
+                <a href="testimonial.html" style="color: orangered;">Testimonials</a>
+            </li>
+        </ul>
     </div>
+
+    <div class="right">
+            <a href="contact.html">Contact Me</a>  
+            <button class="btn-hamburger" onclick="toogleNavbar()">
+              <i class="fa-solid fa-bars"></i>
+            </button>        
+    </div>
+</nav>
+
+<ul class="hamburger-container" id="hamburger-container">
+  <li style="border: 2px solid white; text-align: center; padding: 5px; background-color: pink; color: white; font-weight: bold; font-size: large;">
+    <a href="index.html">Home</a></li>
+  <li style="border: 2px solid white; text-align: center; padding: 5px; background-color: pink; color: white; font-weight: bold; font-size: large;">
+    <a href="project.html">My Project</a></li>
+  <li style="border: 2px solid white; text-align: center; padding: 5px; background-color: pink; color: white; font-weight: bold; font-size: large;">
+    <a href="contact.html">Contact Me</a></li>
+</ul>
+<!--Navbar End-->
 
     <!-- Formulir-->
     <form>
@@ -74,4 +91,10 @@
      </form>
 </body>
 <script src="script.js"></script>
+<script>
+    function toogleNavbar(){
+    const element = document.getElementById("hamburger-container")
+    element.classList.toggle("hamburger-container")
+    }
+  </script>
 </html>

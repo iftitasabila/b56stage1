@@ -40,25 +40,25 @@ function addproject(){
     for(let i = 0; i< show.length; i++){
         document.getElementById("new").innerHTML += `
 <div class="card" style="width: 270px; margin: 5px 10px; box-shadow: 0px 0px 5px; border-radius: 10px;">
-            <a href="project.html?id=${i}" target="_blank">
-                <img src="coding-image.jpg" alt="" style="width: 230px; border-radius: 10px;">
-                <h1 style="margin: 10px 20px;"></h1>
-                <p style="margin: 10px 20px;"></p>
-                <p style="margin: 10px 20px;"></p>
-            </a>
-            <h1>${show[i].project}</h1>
-            <p>Durasi</p>
-            <p>${show[i].description}</p>
-            <div class="image-card">
-                <img src="app-store-brands-solid.svg" alt="">
-                <img src="java-brands-solid.svg" alt="">
-                <img src="html5-brands-solid.svg" alt="">
-            </div>
-            <div class="button-card">
-                <button class="edit-card">Edit</button>
-                <button class="delete-card">Delete</button>
-            </div>
-        </div>
+    <a href="project.html?id=${i}" target="_blank">
+        <img src="./assets/coding-image.jpg" alt="" style="width: 230px; border-radius: 10px;">
+        <h1 style="margin: 10px 20px;"></h1>
+        <p style="margin: 10px 20px;"></p>
+        <p style="margin: 10px 20px;"></p>
+    </a>
+    <h1>${show[i].project}</h1>
+    <p>Durasi</p>
+    <p>${show[i].description}</p>
+    <div class="image-card">
+        <img src="./assets/app-store-brands-solid.svg" alt="">
+        <img src="./assets/java-brands-solid.svg" alt="">
+        <img src="./assets/html5-brands-solid.svg" alt="">
+    </div>
+    <div class="button-card">
+        <button class="edit-card">Edit</button>
+        <button class="delete-card">Delete</button>
+    </div>
+</div>
 `
     }
 }

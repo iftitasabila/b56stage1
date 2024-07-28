@@ -1,7 +1,6 @@
 <html>
   <head>
     <title>Personal Web</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -10,6 +9,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
   <!--Navbar-->
@@ -17,7 +17,7 @@
     <div class="left">
         <ul>
             <img class="logo"
-        src="dumbways.png"
+        src="./assets/dumbways.png"
         alt="logo-image" style="width: 50px; "/>
             <li>
                 <a href="index.html">Home</a>
@@ -25,33 +25,45 @@
             <li>
                 <a href="project.html">My Project</a>
             </li>
+            <li>
+              <a href="testimonial.html" style="color: orangered;">Testimonials</a>
+          </li>
         </ul>
     </div>
 
     <div class="right">
-        <Button>
-            <a href="contact.html">Contact Me</a>
-        </Button>           
+            <a href="contact.html">Contact Me</a>  
+            <button class="btn-hamburger" onclick="toogleNavbar()">
+              <i class="fa-solid fa-bars"></i>
+            </button>        
     </div>
 </nav>
 
-<div class="container">
-    <div class="left"></div>
-    <div class="right"></div>
-</div>
-
+<ul class="hamburger-container" id="hamburger-container">
+  <li style="border: 2px solid white; text-align: center; padding: 5px; background-color: pink; color: white; font-weight: bold; font-size: large;">
+    <a href="index.html">Home</a></li>
+  <li style="border: 2px solid white; text-align: center; padding: 5px; background-color: pink; color: white; font-weight: bold; font-size: large;">
+    <a href="project.html">My Project</a></li>
+  <li style="border: 2px solid white; text-align: center; padding: 5px; background-color: pink; color: white; font-weight: bold; font-size: large;">
+    <a href="contact.html">Contact Me</a></li>
+</ul>
 <!--Navbar End-->
 
   <body>
-    <div class="box">
+    <div class="container">
+    <div 
+    style=" border: 1px black solid;
+    border-radius: 8px;
+    margin: auto;
+    margin-top: 80px;
+    padding: 50px;
+    box-shadow: 0px 0px 30px grey;">
+
       <img
-        src="tita.jpeg"
+        src="./assets/fototita.jpeg"
         style="width: 100%; border-radius: 10px; height: 50%"
       />
       <h1 class="customColor">Iftita Sabila</h1>
-      <p id="description">Seorang Fullstack Developer</p>
-      <p>Dumbways</p>
-      <p class="country">Indonesia</p>
       <i class="fa-brands fa-facebook"></i>
       <i class="fa-brands fa-instagram"></i>
       <i class="fa-brands fa-linkedin"></i>
@@ -71,5 +83,20 @@
         </tr>
       </table>
     </div>
+
+    <div style="padding: 70px;">
+      <h1>What i do</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Inventore suscipit dolorum velit quis distinctio sunt earum ipsum, 
+        necessitatibus, eaque vel ipsam fugit rerum saepe at illum animi harum molestiae architecto.</p>
+    </div>
+  </div>
+
+  <script>
+    function toogleNavbar(){
+    const element = document.getElementById("hamburger-container")
+    element.classList.toggle("hamburger-container")
+    }
+  </script>
   </body>
 </html>

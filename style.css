@@ -2,22 +2,8 @@ body {
   margin: 0;
 }
 
-.box {
-  border: 1px black solid;
-  border-radius: 8px;
-  width: 350px;
-  margin: auto;
-  margin-top: 40px;
-  padding: 20px;
-  box-shadow: 0px 0px 30px grey;
-}
-
 .customColor {
   color: pink !important;
-}
-
-#description {
-  color: black;
 }
 
 p {
@@ -26,6 +12,12 @@ p {
 
 p.country {
   font-weight: 900;
+}
+
+.container {
+  display: flex; 
+  flex-direction: row; 
+  padding: 50px;
 }
 
 
@@ -65,15 +57,58 @@ nav{
   padding-right: 20px;
 }
 
-.right button {
+
+.right a {
   padding: 10px 20px;
   border: none;
   border-radius: 10px;
   background-color: black;
-}
-
-.right a {
   text-decoration: none;
   color: wheat;
   font-weight: 700;
+}
+
+
+/*----*/
+
+.hamburger-container{
+  list-style: none;
+  display: none;
+}
+
+@media only screen and (max-width : 650px) {
+  .container{
+    padding: 40px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+  flex-direction: column; 
+  padding: 0;
+}
+}
+
+/* Navbar */
+.btn-hamburger {
+  display: none;
+}
+
+.hamburger-container{
+  display: none;
+  list-style-type: none;
+}
+
+@media only screen and (max-width: 500px) {
+  .left ul li{
+    display: none;
+  }
+
+  .right a{
+    display: none;
+  }
+
+  .btn-hamburger{
+    display: block;
+  }
 }
